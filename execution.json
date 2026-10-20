@@ -1,0 +1,15 @@
+{
+  "steps": [
+    {
+      "program": "auditok",
+      "operation": "split"
+    }
+  ],
+  "programs": {
+    "auditok": 1
+  },
+  "tags": {
+    "audio_events": 1
+  },
+  "key": "infer_audio_events"
+}

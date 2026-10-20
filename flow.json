@@ -1,0 +1,15 @@
+{
+  "key": "infer_audio_events",
+  "title": "Infer Audio Events",
+  "version": 1,
+  "desc": "Offline infer audio events with complete preflight and atomic results.",
+  "programs": {
+    "auditok": 1
+  },
+  "flows": {},
+  "tags": {
+    "audio_events": 1
+  },
+  "gh_repo": "https://github.com/ariym/mf-flow-infer-audio-events",
+  "artifacts": []
+}

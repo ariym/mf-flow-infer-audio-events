@@ -1,0 +1,19 @@
+{
+  "protocol_version": 1,
+  "job_id": "example-001",
+  "db_path": "/absolute/existing/client.db",
+  "programs": {
+    "auditok": {
+      "version": 1,
+      "path": "/absolute/programs/auditok/bin/auditok"
+    }
+  },
+  "flows": {},
+  "input": {
+    "media": [
+      "/absolute/recording.wav"
+    ],
+    "output_dir": "/absolute/existing/results",
+    "options": {}
+  }
+}
