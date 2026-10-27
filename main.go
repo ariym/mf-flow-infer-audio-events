@@ -45,9 +45,17 @@ func main() {
 	}
 	var result map[string]any
 	if err == nil {
-		result, err = engine.Execute(ctx, req, spec, len(os.Args) == 2)
+		if req.ProtocolVersion == 2 {
+			result, err = executeTargets(ctx, req, spec, len(os.Args) == 2)
+		} else {
+			result, err = engine.Execute(ctx, req, spec, len(os.Args) == 2)
+		}
 	}
-	response := map[string]any{"protocol_version": 1}
+	version := 1
+	if req.ProtocolVersion == 2 {
+		version = 2
+	}
+	response := map[string]any{"protocol_version": version}
 	if err != nil {
 		response["error"] = err.Error()
 		fmt.Fprintln(os.Stderr, err)

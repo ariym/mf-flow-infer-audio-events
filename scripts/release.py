@@ -64,6 +64,7 @@ def build(repo, version, platforms, output):
             "os": target_os, "arch": target_arch,
             "url": f"https://github.com/{repo}/releases/download/v{version}/{name}",
             "sha256": checksum, "entrypoint": entrypoint,
+            "download_bytes": (output / name).stat().st_size,
         })
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     print(output / "manifest.json")

@@ -27,6 +27,8 @@ type Dependency struct {
 	Path    string `json:"path"`
 }
 type Request struct {
+	Targets         []Target                   `json:"targets,omitempty"`
+	Bindings        []Binding                  `json:"bindings,omitempty"`
 	ProtocolVersion int                        `json:"protocol_version"`
 	JobID           string                     `json:"job_id"`
 	DBPath          string                     `json:"db_path"`
